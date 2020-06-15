@@ -168,7 +168,7 @@ resource "aws_cloudfront_origin_access_identity" "o" {
   comment = "this is OAI"
 }
 
-#Creating Cloud-front and attching S3 buccket to it
+#Creating Cloud-front and attaching S3 bucket to it
 resource "aws_cloudfront_distribution" "CDN" {
     origin {
         domain_name = aws_s3_bucket.new_bucket.bucket_domain_name
